@@ -2,7 +2,7 @@ import React from 'react'
 
 const Para = ({ children }) => {
   return (
-    <div className='leading-loose md:text-xl two'>{children}</div>
+    <div className='leading-loose text-sm md:text-xl two'>{children}</div>
   )
 }
 
