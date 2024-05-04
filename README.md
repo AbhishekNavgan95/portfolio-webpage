@@ -1,4 +1,4 @@
-# Abhishek Navgan Portfolio Webpage
+# Portfolio Webpage
 
 Welcome to my portfolio webpage! This project showcases a creative design scheme and interactive elements using React, Tailwind CSS, GitHub API integration, and GSAP with ScrollTrigger.
 
