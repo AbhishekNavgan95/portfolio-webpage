@@ -33,7 +33,7 @@ const Home = () => {
             <div className='mx-auto'>
                 <Header text={"Full Stack-Web Developer </>,-CS Student 📘,-Tech Enthusiast 👨‍💻."} />
                 <Frame>
-                    <div className='py-5 flex flex-col items-start gap-7'>
+                    <div className='md:py-5 flex flex-col items-start gap-5 md:gap-7'>
                         <span className='overflow-hidden'>
                             <Para>
                                 Hi👋 I'm Abhishek Navgan, a Bachelor of Computer Application student at TMV Pune. I enjoy crafting creative websites and software using various technologies, specializing particularly in web development with the MERN stack 💫.
@@ -52,40 +52,40 @@ const Home = () => {
                     </div>
                 </Frame>
 
-                <div className='py-10 flex flex-col'>
+                <div className='py-5 md:py-10 flex flex-col'>
                     <LinkBtn link={url.github_url}>
                         <FaGithub className='' />
                         <span className='w-1/2 transition-all h-[1px] bg-accent group-hover:bg-f-light'></span>
-                        <MdArrowOutward className='group-hover:rotate-45 transition-transform' />
+                        <MdArrowOutward className='group-hover:rotate-45 group-focus:rotate-45  transition-transform' />
                     </LinkBtn>
                     <LinkBtn link={url.linkedin_url}>
                         <FaLinkedinIn className='' />
                         <span className='w-1/2 transition-all h-[1px] bg-accent group-hover:bg-f-light'></span>
-                        <MdArrowOutward className='group-hover:rotate-45 transition-transform' />
+                        <MdArrowOutward className='group-hover:rotate-45 group-focus:rotate-45  transition-transform' />
                     </LinkBtn>
                     <LinkBtn link={url.instagram_url}>
                         <FaInstagram className='' />
                         <span className='w-1/2 transition-all h-[1px] bg-accent group-hover:bg-f-light'></span>
-                        <MdArrowOutward className='group-hover:rotate-45 transition-transform' />
+                        <MdArrowOutward className='group-hover:rotate-45 group-focus:rotate-45  transition-transform' />
                     </LinkBtn>
                     <LinkBtn link={url.twitter_url}>
                         <FaXTwitter className='' />
                         <span className='w-1/2 transition-all h-[1px] bg-accent group-hover:bg-f-light'></span>
-                        <MdArrowOutward className='group-hover:rotate-45 transition-transform' />
+                        <MdArrowOutward className='group-hover:rotate-45 group-focus:rotate-45  transition-transform' />
                     </LinkBtn>
                 </div>
 
-                <div className='bg-dark py-10 text-xl' id='skills'>
+                <div className='bg-dark pt-5 md:py-10 text-xl' id='skills'>
                     <Frame>
                         <div className='flex flex-col gap-5'>
                             <div className='flex flex-col gap-5'>
-                                <h3 className='text-2xl text-f-light skill-one'>Skills</h3>
-                                <p className='skill-one'>Tech which I have worked with.</p>
+                                <h3 className='text-xl md:text-2xl text-f-light skill-one'>Skills</h3>
+                                <p className='text-sm md:text-xl skill-one'>Tech which I have worked with.</p>
                             </div>
-                            <div className='flex gap-x-5 gap-y-3 flex-wrap items-center justify-center my-5'>
+                            <div className='flex gap-x-3 md:gap-x-5 gap-y-3 flex-wrap items-center justify-center my-5'>
                                 {
                                     skills.map((skill, index) => (
-                                        <span key={index} className='skill-three px-4 transition-all duration-300 bg-light py-1 border rounded-lg border-accent-light'>{skill}</span>
+                                        <span key={index} className='text-sm md:text-xl skill-three px-4 transition-all duration-300 bg-light py-1 border rounded-lg border-accent-light text-nowrap'>{skill}</span>
                                     ))
                                 }
                             </div>
@@ -93,12 +93,12 @@ const Home = () => {
                     </Frame>
                 </div>
 
-                <div className='bg-dark py-10 text-xl' id='fetured-projects'>
+                <div className='bg-dark py-5 md:py-10 text-xl' id='fetured-projects'>
                     <Frame>
                         <div className='flex flex-col gap-5'>
                             <div className='flex flex-col gap-5'>
-                                <h3 className='text-2xl text-f-light fet-one'>Featured Projects</h3>
-                                <p className='fet-two'>A collection of some side projects I have done.</p>
+                                <h3 className='text-xl md:text-2xl text-f-light fet-one'>Featured Projects</h3>
+                                <p className='text-sm md:text-xl fet-two'>A collection of some side projects I have done.</p>
                             </div>
                             <div className='flex flex-col gap-5 py-5 '>
                                 {
