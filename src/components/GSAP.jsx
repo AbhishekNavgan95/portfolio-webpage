@@ -59,6 +59,44 @@ const GSAP = ({projects}) => {
             duration: 0.5,
             stagger: 0.3
         })
+
+        
+        const t4 = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#skills",
+                scroller: "body",
+                start: "50 80%",
+                // markers: true,
+            }
+        })
+
+        t4.from(".skill-one", {
+            opacity: 0,
+            duration: 0.5,
+            stagger: 0.2
+        }).from(".skill-two", {
+            opacity: 0,
+            duration: 0.5,
+            stagger: 0.3
+        })
+
+        const t5 = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#skills",
+                scroller: "body",
+                start: "0 50%",
+                end: "100% 50%",
+                // markers: true,
+                scrub: true
+            }
+        })
+        
+        t5.to(".skill-three", {
+            backgroundColor: "#a5a5a5",
+            color: "#111111",
+            stagger: 0.2
+        })
+
     }, [projects])
 
     return null

@@ -9,7 +9,7 @@ import { MdArrowOutward } from "react-icons/md";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { url } from '../data/constants'
+import { url, skills } from '../data/constants'
 import axios from 'axios'
 import ProjectCard from '../components/ProjectCard'
 import GSAP from '../components/GSAP'
@@ -29,7 +29,7 @@ const Home = () => {
 
     return (
         <>
-        <GSAP  projects={projects} />
+            <GSAP projects={projects} />
             <div className='mx-auto'>
                 <Header text={"Full Stack-Web Developer </>,-CS Student 📘,-Tech Enthusiast 👨‍💻."} />
                 <Frame>
@@ -75,6 +75,24 @@ const Home = () => {
                     </LinkBtn>
                 </div>
 
+                <div className='bg-dark py-10 text-xl' id='skills'>
+                    <Frame>
+                        <div className='flex flex-col gap-5'>
+                            <div className='flex flex-col gap-5'>
+                                <h3 className='text-2xl text-f-light skill-one'>Skills</h3>
+                                <p className='skill-one'>Tech which I have worked with.</p>
+                            </div>
+                            <div className='flex gap-x-5 gap-y-3 flex-wrap items-center justify-center my-5'>
+                                {
+                                    skills.map((skill, index) => (
+                                        <span key={index} className='skill-three px-4 transition-all duration-300 bg-light py-1 border rounded-lg border-accent-light'>{skill}</span>
+                                    ))
+                                }
+                            </div>
+                        </div>
+                    </Frame>
+                </div>
+
                 <div className='bg-dark py-10 text-xl' id='fetured-projects'>
                     <Frame>
                         <div className='flex flex-col gap-5'>
@@ -85,7 +103,7 @@ const Home = () => {
                             <div className='flex flex-col gap-5 py-5 '>
                                 {
                                     projects.length > 0 ? projects.map((project) => (
-                                        <div key={project.id } className='fet-two'>
+                                        <div key={project.id} className='fet-two'>
                                             <ProjectCard project={project} />
                                         </div>
                                     ))
