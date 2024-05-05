@@ -9,6 +9,24 @@ Welcome to my portfolio webpage! This project showcases a creative design scheme
 - **Interactive Elements**: Utilizes GSAP and ScrollTrigger for engaging user interactions.
 - **Modern Stack**: Built with React for component-based architecture and Tailwind CSS for rapid styling.
 
+## Sneak peek
+
+<table border=2>
+   <tr>
+      <td colspan=2>
+         <img src="public/img2.png">
+      </td>
+   </tr>
+   <tr>
+      <td>
+         <img src="public/img1.png">
+      </td>
+      <td>
+         <img src="public/img3.png">
+      </td>
+   </tr>
+</table>
+
 ## Tech Stack
 
 - **React**: Frontend library for building user interfaces.
@@ -19,21 +37,26 @@ Welcome to my portfolio webpage! This project showcases a creative design scheme
 ## Setup
 
 1. **Clone the Repository:**
-   
+
    ```bash
    git clone https://github.com/yourusername/your-portfolio.git
 
-3. **Install Dependencies:**
-   
+   ```
+
+2. **Install Dependencies:**
+
    ```bash
    cd your-portfolio
    npm install
 
-5. **Set Environment Variables:**
-   
--  Create a .env file in the project root. along with links for your social media
+   ```
+
+3. **Set Environment Variables:**
+
+- Create a .env file in the project root. along with links for your social media
 
 4. **Run the Application:**
-   
+
    ```
    npm run dev
+   ```
