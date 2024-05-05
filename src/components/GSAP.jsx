@@ -2,7 +2,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-const GSAP = ({projects}) => {
+const GSAP = ({projects, errorRef}) => {
 
     gsap.registerPlugin(ScrollTrigger);
 
@@ -74,10 +74,6 @@ const GSAP = ({projects}) => {
             opacity: 0,
             duration: 0.5,
             stagger: 0.2
-        }).from(".skill-two", {
-            opacity: 0,
-            duration: 0.5,
-            stagger: 0.3
         })
 
         const t5 = gsap.timeline({

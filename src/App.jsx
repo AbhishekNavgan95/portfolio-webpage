@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar"
 function App() {
 
   return (
+    <>
     <div className="w-full font-mono min-h-screen bg-light text-accent">
       <div className="overflow-hidden">
         <Navbar />
@@ -19,6 +20,7 @@ function App() {
         </Route>
       </Routes>
     </div >
+    </>
   )
 }
 

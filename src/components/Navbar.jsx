@@ -5,7 +5,7 @@ import Frame from './Frame';
 
 const Navbar = () => {
   return (
-    <nav className='fixed w-full border-b py-5 bg-[dark-blur] border-accent-light px-4 nav-one'>
+    <nav className='fixed z-[5] w-full border-b py-5 bg-dark-blur border-accent-light px-4 nav-one'>
       <Frame>
         <div className='flex flex-col md:flex-row gap-y-5 justify-between items-center'>
           <Link to={"/"} className=' text-2xl'>
@@ -18,7 +18,7 @@ const Navbar = () => {
             <span className='nav-three'>
               <NavLink className={({ isActive }) => isActive ? "px-2 py-1 text-f-light border-b-2 transition-all duration-400 " : "py-1 px-2 border-b-2 border-transparent transition-all duration-400 hover:text-f-light"} to={"/about"}>About</NavLink>
             </span>
-            <span className='nav-three'>
+            <span className='nav-three'>  
               <a href="AbhishekNavgan.pdf" target='_blank' className='flex items-center gap-3 hover:text-f-light transition-all duration-300'><span className='text-xl'><IoMdDownload /></span>Resume</a>
             </span>
           </div>

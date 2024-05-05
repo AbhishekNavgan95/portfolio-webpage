@@ -13,6 +13,7 @@ import { url, skills } from '../data/constants'
 import axios from 'axios'
 import ProjectCard from '../components/ProjectCard'
 import GSAP from '../components/GSAP'
+import { IoIosArrowForward } from "react-icons/io";
 
 const Home = () => {
 
@@ -46,7 +47,7 @@ const Home = () => {
                         </span>
                         <span className='overflow-hidden py-2'>
                             <span className='two'>
-                                <CtaButton link="mailto:navganabhishek90@gmail.com">Email me</CtaButton>
+                                <CtaButton link="mailto:navganabhishek90@gmail.com">Email me<IoIosArrowForward /></CtaButton>
                             </span>
                         </span>
                     </div>
