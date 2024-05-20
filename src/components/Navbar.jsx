@@ -5,7 +5,7 @@ import Frame from './Frame';
 
 const Navbar = () => {
   return (
-    <nav className='fixed z-[5] w-full border-b py-5 bg-dark-blur border-accent-light px-4 nav-one'>
+    <nav className='fixed z-[5] w-full border-b py-5 bg-dark-blur border-accent-light px-4 nav-one backdrop-blur-sm'>
       <Frame>
         <div className='flex flex-col md:flex-row gap-y-5 justify-between items-center'>
           <Link to={"/"} className=' text-2xl'>

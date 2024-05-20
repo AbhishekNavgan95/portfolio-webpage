@@ -18,7 +18,6 @@ import { IoIosArrowForward } from "react-icons/io";
 const Home = () => {
 
     const [projects, setProjects] = useState([]);
-
     const getProjects = async () => {
         const res = await axios.get("https://api.github.com/users/AbhishekNavgan95/repos");
         setProjects(res.data.filter((a) => a?.topics.includes("show")))
@@ -30,7 +29,7 @@ const Home = () => {
 
     return (
         <>
-            <GSAP projects={projects} />
+            <GSAP projects={projects} skills={skills} />
             <div className='mx-auto'>
                 <Header text={"Full Stack-Web Developer </>,-CS Student 📘,-Tech Enthusiast 👨‍💻."} />
                 <Frame>
@@ -47,7 +46,7 @@ const Home = () => {
                         </span>
                         <span className='overflow-hidden py-2'>
                             <span className='two'>
-                                <CtaButton link="mailto:navganabhishek90@gmail.com">Email me<IoIosArrowForward /></CtaButton>
+                                <CtaButton link="mailto:navganabhishek90@gmail.com">Email<IoIosArrowForward /></CtaButton>
                             </span>
                         </span>
                     </div>
@@ -80,13 +79,15 @@ const Home = () => {
                     <Frame>
                         <div className='flex flex-col gap-5'>
                             <div className='flex flex-col gap-5'>
-                                <h3 className='text-xl md:text-2xl text-f-light skill-one'>Skills</h3>
+                                <h3 className='text-xl md:text-2xl text-f-light skill-one'>Tech Stack</h3>
                                 <p className='text-sm md:text-xl skill-one'>Tech which I have worked with.</p>
                             </div>
-                            <div className='flex gap-x-3 md:gap-x-5 gap-y-3 flex-wrap items-center justify-center my-5'>
+                            <div className='flex gap-x-3 md:gap-x-5 gap-y-3 flex-wrap items-center justify-center my-5 skill-one'>
                                 {
                                     skills.map((skill, index) => (
-                                        <span key={index} className='text-sm md:text-xl skill-three px-4 transition-all duration-300 bg-light py-1 border rounded-lg border-accent-light text-nowrap'>{skill}</span>
+                                        <span key={index} className='text-sm md:text-xl skill-three p-3 transition-all duration-300 bg-light  border rounded-lg border-accent-light text-nowrap backdrop-blur-xl '>
+                                            <img className='w-[30px] md:w-[50px] aspect-square' src={skill?.URL} alt="" />
+                                        </span>
                                     ))
                                 }
                             </div>
@@ -99,7 +100,7 @@ const Home = () => {
                         <div className='flex flex-col gap-5'>
                             <div className='flex flex-col gap-5'>
                                 <h3 className='text-xl md:text-2xl text-f-light fet-one'>Featured Projects</h3>
-                                <p className='text-sm md:text-xl fet-two'>A collection of some side projects I have done.</p>
+                                <p className='text-sm md:text-xl fet-two'>A collection of some of my side projects.</p>
                             </div>
                             <div className='flex flex-col gap-5 py-5 '>
                                 {

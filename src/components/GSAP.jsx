@@ -2,7 +2,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-const GSAP = ({projects, errorRef}) => {
+const GSAP = ({projects}) => {
 
     gsap.registerPlugin(ScrollTrigger);
 
@@ -80,8 +80,8 @@ const GSAP = ({projects, errorRef}) => {
             scrollTrigger: {
                 trigger: "#skills",
                 scroller: "body",
-                start: "0 50%",
-                end: "100% 50%",
+                start: "0 60%",
+                end: "100% 60%",
                 // markers: true,
                 scrub: true
             }

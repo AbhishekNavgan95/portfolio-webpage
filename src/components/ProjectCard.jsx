@@ -9,7 +9,7 @@ const ProjectCard = ({ project }) => {
     }
 
     return (
-        <div className='p-3 md:px-5 md:py-5 w-full bg-light rounded-lg inline-block border border-accent-light hover:border-f-light transition-all duration-300'>
+        <div className='p-3 md:px-5 md:py-5 w-full bg-light rounded-lg inline-block border border-accent-light hover:border-f-light transition-all duration-300 backdrop-blur-lg'>
             <h3 className='flex items-center gap-3 mb-2 text-lg md:text-xl text-f-light'><FaDotCircle />{project?.name}</h3>
             <p className='text-sm md:text-lg line-clamp-2'>{project?.description}</p>
             <div className='flex justify-center md:justify-start gap-x-2 gap-y-2 flex-wrap text-lg my-3'>
