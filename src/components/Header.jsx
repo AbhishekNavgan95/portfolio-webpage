@@ -4,7 +4,7 @@ const Header = ({ text }) => {
     let textArr = text.split('-');
 
     return (
-        <header className='text-2xl sm:text-4xl md:text-5xl mx-auto w-full pt-32 md:pt-24'>
+        <header className='text-2xl sm:text-4xl md:text-5xl mx-auto w-full pt-20 md:pt-24'>
             <div className='px-5 md:w-4/5 xl:w-1/2 mx-auto py-5 leading-relaxed text-f-light font-bold '>
                 {textArr.map((t, index) => (
                     <div key={index} className='overflow-hidden'>

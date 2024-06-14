@@ -25,22 +25,6 @@ const GSAP = ({projects}) => {
             duration: 0.5
         })
 
-        const navbar = gsap.timeline()
-
-        navbar.from(".nav-one", {
-            y: "-150%",
-            opacity: 0,
-            duration: 0.5
-        }).from(".nav-two", {
-            opacity: 0,
-            stagger: 0.3,
-            duration: 0.5,
-        }).from(".nav-three", {
-            opacity: 0,
-            stagger: 0.1,
-            duration: 0.5,
-        })
-
         const t3 = gsap.timeline({
             scrollTrigger: {
                 trigger: "#fetured-projects",
@@ -88,7 +72,7 @@ const GSAP = ({projects}) => {
         })
         
         t5.to(".skill-three", {
-            backgroundColor: "#a5a5a5",
+            backgroundColor: "#eeeeee",
             color: "#111111",
             stagger: 0.2
         })
