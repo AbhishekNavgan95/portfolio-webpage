@@ -14,6 +14,7 @@ import axios from 'axios'
 import ProjectCard from '../components/ProjectCard'
 import GSAP from '../components/GSAP'
 import { IoIosArrowForward } from "react-icons/io";
+import me from "../assets/me.png"
 
 const Home = () => {
 
@@ -33,20 +34,38 @@ const Home = () => {
             <div className='mx-auto'>
                 <Header text={"Full Stack-Web Developer </>,-CS Student 📘,-Tech Enthusiast 👨‍💻."} />
                 <Frame>
-                    <div className='md:py-5 flex flex-col items-start gap-5 md:gap-7'>
-                        <span className='overflow-hidden'>
-                            <Para>
-                                Hi👋 I'm Abhishek Navgan, a Bachelor of Computer Application student at TMV Pune. I enjoy crafting creative websites and software using various technologies, specializing particularly in web development with the MERN stack 💫.
-                            </Para>
-                        </span>
-                        <span className='overflow-hidden'>
-                            <Para>
-                                Besides coding, I like to stay updated on the latest global tech innovations, especially in hardware, automobiles 🚕 amd aviation 🛫. One of my quirks is striving for pixel-perfection — I can't resist tweaking something until it feels just right! (Although I might overdo it sometimes 😉)
-                            </Para>
-                        </span>
-                        <span className='overflow-hidden py-2'>
-                            <span className='two'>
-                                <CtaButton link="mailto:navganabhishek90@gmail.com">Email<IoIosArrowForward /></CtaButton>
+                    <div className='md:py-5 flex flex-col lg:flex-row items-start gap-7 w-full'>
+                        <img src={me} className='two rounded-full mt-2 border grayscale aspect-square object-cover  max-w-[150px] xl:max-w-[200px]' alt="" />
+                        <span className='flex flex-col gap-5 md:gap-7 '>
+                            <span className='overflow-hidden'>
+                                <Para>
+                                    Hi👋 I'm Abhishek Navgan, a passionate Developer and technology enthusiast on a journey to master the
+                                    digital world. I'm currently a Bachelor of Computer Application
+                                    student at TMV Pune, where I dive deep into the realms of coding and development.
+                                    I enjoy crafting creative websites and software using various technologies,
+                                    specializing particularly in web development with the MERN stack 💫.
+                                </Para>
+                            </span>
+                            <span className='overflow-hidden'>
+                                <Para>
+                                    Besides coding, I have a keen interest in staying updated on the latest global
+                                    tech innovations. My enthusiasm for computer hardware, automobiles 🚕, and aviation
+                                    🛫 plays a significant role in my daily life. One of my quirks is striving for
+                                    pixel-perfection — I can't resist tweaking something until it feels just right!
+                                    (Although I might overdo it sometimes 😉).
+                                </Para>
+                            </span>                            
+                            <span className='overflow-hidden'>
+                                <Para>
+                                    The image is a throwback to when I was 10-12
+                                    years old and somehow managed to be a school topper — I might look a
+                                    bit different now, but time changes us all for the better 🙂!
+                                </Para>
+                            </span>
+                            <span className='overflow-hidden py-2'>
+                                <span className='two'>
+                                    <CtaButton link="mailto:navganabhishek90@gmail.com">Email<IoIosArrowForward /></CtaButton>
+                                </span>
                             </span>
                         </span>
                     </div>
