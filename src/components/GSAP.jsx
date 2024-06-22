@@ -2,7 +2,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-const GSAP = ({projects}) => {
+const GSAP = ({ projects }) => {
 
     gsap.registerPlugin(ScrollTrigger);
 
@@ -42,44 +42,48 @@ const GSAP = ({projects}) => {
             opacity: 0,
             duration: 0.5,
             stagger: 0.3
-        })
-
-        
-        const t4 = gsap.timeline({
-            scrollTrigger: {
-                trigger: "#skills",
-                scroller: "body",
-                start: "50 80%",
-                // markers: true,
-            }
-        })
-
-        t4.from(".skill-one", {
+        }).from(".footer", {
             opacity: 0,
             duration: 0.5,
-            stagger: 0.2
+            stagger: 0.3
         })
 
-        const t5 = gsap.timeline({
-            scrollTrigger: {
-                trigger: "#skills",
-                scroller: "body",
-                start: "0 60%",
-                end: "100% 60%",
-                // markers: true,
-                scrub: true
-            }
-        })
-        
-        t5.to(".skill-three", {
-            backgroundColor: "#eeeeee",
-            color: "#111111",
-            stagger: 0.2
-        })
 
-    }, [projects])
+    const t4 = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#skills",
+            scroller: "body",
+            start: "50 80%",
+            // markers: true,
+        }
+    })
 
-    return null
+    t4.from(".skill-one", {
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.2
+    })
+
+    const t5 = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#skills",
+            scroller: "body",
+            start: "0 60%",
+            end: "100% 60%",
+            // markers: true,
+            scrub: true
+        }
+    })
+
+    t5.to(".skill-three", {
+        backgroundColor: "#eeeeee",
+        color: "#111111",
+        stagger: 0.2
+    })
+
+}, [projects])
+
+return null
 }
 
 export default GSAP

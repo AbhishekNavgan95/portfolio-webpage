@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react'
+import React, { useState, useMemo } from 'react'
 import Header from '../components/Header'
 import Para from '../components/Para'
 import CtaButton from '../components/CtaButton'
@@ -15,6 +15,7 @@ import ProjectCard from '../components/ProjectCard'
 import GSAP from '../components/GSAP'
 import { IoIosArrowForward } from "react-icons/io";
 import me from "../assets/me.png"
+import Footer from '../components/Footer'
 
 const Home = () => {
 
@@ -54,7 +55,7 @@ const Home = () => {
                                     pixel-perfection — I can't resist tweaking something until it feels just right!
                                     (Although I might overdo it sometimes 😉).
                                 </Para>
-                            </span>                            
+                            </span>
                             <span className='overflow-hidden'>
                                 <Para>
                                     The image is a throwback to when I was 10-12
@@ -137,6 +138,9 @@ const Home = () => {
                     </Frame>
                 </div>
 
+                <footer id='footer' className='bg-dark'>
+                    <Footer />
+                </footer>
             </div>
         </>
     )
