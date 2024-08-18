@@ -14,15 +14,19 @@ import axios from 'axios'
 import ProjectCard from '../components/ProjectCard'
 import GSAP from '../components/GSAP'
 import { IoIosArrowForward } from "react-icons/io";
-import me from "../assets/me.png"
+import me from '../assets/me.png'
 import Footer from '../components/Footer'
+import GSAPprojects from '../components/GSAPprojects'
+import { IoMdDownload } from "react-icons/io";
 
 const Home = () => {
 
     const [projects, setProjects] = useState([]);
     const getProjects = async () => {
         const res = await axios.get("https://api.github.com/users/AbhishekNavgan95/repos");
-        setProjects(res.data.filter((a) => a?.topics.includes("show")))
+        setTimeout(() => {
+            setProjects(res.data.filter((a) => a?.topics.includes("show")))
+        }, 1000);
     }
 
     useMemo(() => {
@@ -31,41 +35,42 @@ const Home = () => {
 
     return (
         <>
-            <GSAP projects={projects} skills={skills} />
+            <GSAP skills={skills} />
+            <GSAPprojects projects={projects} />
             <div className='mx-auto'>
-                <Header text={"Full Stack-Web Developer </>,-CS Student 📘,-Tech Enthusiast 👨‍💻."} />
+                <Header text={"Full Stack </>-Web Developer,-CS undergrad 🖥️-Passinate Student 📖."} />
                 <Frame>
                     <div className='md:py-5 flex flex-col lg:flex-row items-start gap-7 w-full'>
                         <img src={me} className='two rounded-full mt-2 border grayscale aspect-square object-cover  max-w-[150px] xl:max-w-[200px]' alt="" />
                         <span className='flex flex-col gap-5 md:gap-7 '>
                             <span className='overflow-hidden'>
                                 <Para>
-                                    Hi👋 I'm Abhishek Navgan, a passionate Developer and technology enthusiast on a journey to master the
-                                    digital world. I'm currently a Bachelor of Computer Application
-                                    student at TMV Pune, where I dive deep into the realms of coding and development.
+                                    Hi👋 I'm Abhishek Navgan, a passionate developer and technology enthusiast
+                                    on a journey to master the world of IT. I'm currently pursuing a Bachelor of
+                                    Computer Application at TMV Pune, where I focus on coding and development.
                                     I enjoy crafting creative websites and software using various technologies,
                                     specializing particularly in web development with the MERN stack 💫.
                                 </Para>
                             </span>
                             <span className='overflow-hidden'>
                                 <Para>
-                                    Besides coding, I have a keen interest in staying updated on the latest global
-                                    tech innovations. My enthusiasm for computer hardware, automobiles 🚕, and aviation
-                                    🛫 plays a significant role in my daily life. One of my quirks is striving for
-                                    pixel-perfection — I can't resist tweaking something until it feels just right!
-                                    (Although I might overdo it sometimes 😉).
+                                    Besides coding, I have a strong passion
+                                    for web design, though I'm not actively pursuing that path right now.
+                                    My enthusiasm for computers, automobiles 🚕, and gaming 🛫 plays a
+                                    significant role in my daily life. I have a bit of a perfectionist streak —
+                                    I can't resist fine-tuning something until it feels just right, even if it
+                                    means going a little overboard sometimes! 😉
                                 </Para>
                             </span>
-                            <span className='overflow-hidden'>
-                                <Para>
-                                    The image is a throwback to when I was 10-12
-                                    years old and somehow managed to be a school topper — I might look a
-                                    bit different now, but time changes us all for the better 🙂!
-                                </Para>
-                            </span>
-                            <span className='overflow-hidden py-2'>
+                            <span className='overflow-hidden py-2 flex gap-3'>
                                 <span className='two'>
                                     <CtaButton link="mailto:navganabhishek90@gmail.com">Email<IoIosArrowForward /></CtaButton>
+                                </span>
+                                <span className='two'>
+                                    <CtaButton target='_blank' link="AbhishekNavgan.pdf" >
+                                        <IoMdDownload />
+                                        <span >Resume</span>
+                                    </CtaButton>
                                 </span>
                             </span>
                         </span>
@@ -75,22 +80,22 @@ const Home = () => {
                 <div className='py-5 md:py-10 flex flex-col'>
                     <LinkBtn link={url.github_url}>
                         <FaGithub className='' />
-                        <span className='w-1/2 transition-all duration-1000 h-[1px] bg-accent group-hover:bg-dark'></span>
+                        <span className='w-1/2 h-[1px] bg-accent group-hover:bg-dark'></span>
                         <MdArrowOutward className='group-hover:rotate-45 group-focus:rotate-45  transition-transform' />
                     </LinkBtn>
                     <LinkBtn link={url.linkedin_url}>
                         <FaLinkedinIn className='' />
-                        <span className='w-1/2 transition-all duration-1000 h-[1px] bg-accent group-hover:bg-dark'></span>
+                        <span className='w-1/2 h-[1px] bg-accent group-hover:bg-dark'></span>
                         <MdArrowOutward className='group-hover:rotate-45 group-focus:rotate-45  transition-transform' />
                     </LinkBtn>
                     <LinkBtn link={url.instagram_url}>
                         <FaInstagram className='' />
-                        <span className='w-1/2 transition-all duration-1000 h-[1px] bg-accent group-hover:bg-dark'></span>
+                        <span className='w-1/2 h-[1px] bg-accent group-hover:bg-dark'></span>
                         <MdArrowOutward className='group-hover:rotate-45 group-focus:rotate-45  transition-transform' />
                     </LinkBtn>
                     <LinkBtn link={url.twitter_url}>
                         <FaXTwitter className='' />
-                        <span className='w-1/2 transition-all duration-1000 h-[1px] bg-accent group-hover:bg-dark'></span>
+                        <span className='w-1/2 h-[1px] bg-accent group-hover:bg-dark'></span>
                         <MdArrowOutward className='group-hover:rotate-45 group-focus:rotate-45  transition-transform' />
                     </LinkBtn>
                 </div>

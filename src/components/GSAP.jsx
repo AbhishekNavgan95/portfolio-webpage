@@ -2,7 +2,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-const GSAP = ({ projects }) => {
+const GSAP = () => {
 
     gsap.registerPlugin(ScrollTrigger);
 
@@ -25,65 +25,41 @@ const GSAP = ({ projects }) => {
             duration: 0.5
         })
 
-        const t3 = gsap.timeline({
+        const t4 = gsap.timeline({
             scrollTrigger: {
-                trigger: "#fetured-projects",
+                trigger: "#skills",
                 scroller: "body",
                 start: "50 80%",
                 // markers: true,
             }
         })
 
-        t3.from(".fet-one", {
+        t4.from(".skill-one", {
             opacity: 0,
             duration: 0.5,
             stagger: 0.2
-        }).from(".fet-two", {
-            opacity: 0,
-            duration: 0.5,
-            stagger: 0.3
-        }).from(".footer", {
-            opacity: 0,
-            duration: 0.5,
-            stagger: 0.3
         })
 
+        const t5 = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#skills",
+                scroller: "body",
+                start: "0 60%",
+                end: "100% 60%",
+                // markers: true,
+                scrub: true
+            }
+        })
 
-    const t4 = gsap.timeline({
-        scrollTrigger: {
-            trigger: "#skills",
-            scroller: "body",
-            start: "50 80%",
-            // markers: true,
-        }
-    })
+        t5.to(".skill-three", {
+            backgroundColor: "#eeeeee",
+            color: "#111111",
+            stagger: 0.2
+        })
 
-    t4.from(".skill-one", {
-        opacity: 0,
-        duration: 0.5,
-        stagger: 0.2
-    })
+    }, [])
 
-    const t5 = gsap.timeline({
-        scrollTrigger: {
-            trigger: "#skills",
-            scroller: "body",
-            start: "0 60%",
-            end: "100% 60%",
-            // markers: true,
-            scrub: true
-        }
-    })
-
-    t5.to(".skill-three", {
-        backgroundColor: "#eeeeee",
-        color: "#111111",
-        stagger: 0.2
-    })
-
-}, [projects])
-
-return null
+    return null
 }
 
 export default GSAP

@@ -38,11 +38,11 @@ const Footer = () => {
     })
 
     return (
-        <section className='py-5 md:py-10 text-xl ' id='footer'>
+        <section className='pb-14 text-xl ' id='footer'>
             <Frame>
-                <span className='flex flex-col gap-3 '>
-                    <h4 className="footer">Thanks for visiting &lt;3</h4>
-                    <p className='text-3xl border-b  border-dashed w-max pb-1 font-semibold footer'>Have a {word} <span className="text-sky-500">{day}...</span></p>
+                <span className='flex flex-col gap-3'>
+                    <h4 className="footer text-base">Thanks for visiting &lt;3</h4>
+                    <p className='text-xl lg:text-3xl text-wrap border-b  border-dashed w-max pb-1 font-semibold footer'>Have a {word} <span className="text-sky-500">{day}...</span></p>
                 </span>
             </Frame>
         </section>

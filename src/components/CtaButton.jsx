@@ -1,8 +1,8 @@
 import React, { Children } from 'react'
 
-const CtaButton = ({children, link}) => {
+const CtaButton = ({children, link, target}) => {
   return (
-    <a href={link} className='rounded-lg border-accent-medium flex items-center w-max gap-1 hover:gap-3  px-5 md:text-xl py-2 bg-accent-light hover:text-dark focus:text-dark hover:bg-f-light focus:bg-f-light hover:font-bold focus:font-bold focus:outline-none transition-all duration-300 '>
+    <a href={link} target={target} className='rounded-lg border-accent-medium flex items-center w-max gap-1 hover:gap-3  px-5 md:text-xl py-1 sm:py-2 bg-accent-light hover:text-dark focus:text-dark hover:bg-f-light focus:bg-f-light hover:font-bold focus:font-bold focus:outline-none transition-all duration-300 '>
         {children}
     </a>
   )

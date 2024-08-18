@@ -20,7 +20,7 @@ const ProjectCard = ({ project }) => {
                     ))
                 }
             </div>
-            <div className='md:mt-4 text-lg flex items-center gap-5'>
+            <div className='md:mt-4 text-lg flex items-center justify-end gap-5'>
                 <a href={project?.html_url} target='_blank' className='underline text-blue-400 hover:text-blue-500 transition-all duration-300'>Github</a>
                 {
                     project?.homepage &&

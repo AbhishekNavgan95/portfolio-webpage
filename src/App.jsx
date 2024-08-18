@@ -1,25 +1,23 @@
 import { Routes, Route } from "react-router-dom"
 import Home from "./pages/Home"
-import About from "./pages/About"
 import Error from "./pages/Error"
-import Navbar from "./components/Navbar"
 
 function App() {
 
   return (
     <>
-    <div className="w-full font-mono min-h-screen bg-light text-accent">
-      <div className="overflow-hidden">
-        <Navbar />
+      <div className="font-mono bg-light text-accent overflow-hidden">
+        <div className="fixed inset-0 border-[10px] z-[5] border-current pointer-events-none"></div>
+        <div className="w-full h-full overflow-y-auto">
+          <Routes>
+            <Route path="/">
+              <Route index element={<Home />} />
+              <Route path="*" element={<Error />} />
+            </Route>
+          </Routes>
+        </div>
       </div>
-      <Routes>
-        <Route path="/">
-          <Route index element={<Home />}></Route>
-          <Route path="about" element={<About />} />
-          <Route path="*" element={<Error />} />
-        </Route>
-      </Routes>
-    </div >
+
     </>
   )
 }
