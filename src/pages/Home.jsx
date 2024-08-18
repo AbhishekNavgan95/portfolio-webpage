@@ -38,7 +38,7 @@ const Home = () => {
             <GSAP skills={skills} />
             <GSAPprojects projects={projects} />
             <div className='mx-auto'>
-                <Header text={"Full Stack </>-Web Developer,-CS undergrad 🖥️-Passinate Student 📖."} />
+                <Header text={"Full Stack </>-Web Developer, -CS undergrad 🖥️ -Passionate Student 📖."} />
                 <Frame>
                     <div className='md:py-5 flex flex-col lg:flex-row items-start gap-7 w-full'>
                         <img src={me} className='two rounded-full mt-2 border grayscale aspect-square object-cover  max-w-[150px] xl:max-w-[200px]' alt="" />
