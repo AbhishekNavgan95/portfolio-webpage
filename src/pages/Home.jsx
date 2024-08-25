@@ -10,7 +10,6 @@ import Profile from '../components/Profile'
 import Links from '../components/Links'
 import { skills } from "../data/constants"
 import Projects from '../components/Projects'
-import BackToTop from '../components/BackToTop'
 
 const Home = () => {
 

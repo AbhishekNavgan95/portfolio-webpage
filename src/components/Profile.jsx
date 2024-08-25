@@ -4,29 +4,8 @@ import Para from '../components/Para'
 import CtaButton from '../components/CtaButton'
 import { IoIosArrowForward } from "react-icons/io";
 import { IoMdDownload } from "react-icons/io";
-import Typewriter from 'typewriter-effect/dist/core';
 
 const Profile = () => {
-
-    
-    useEffect(() => {
-        new Typewriter('#greet', {
-            strings: [
-                "Hola,",
-                "Namaste,",
-                "Konnichiwa,",
-                "Hello,",
-                "Bonjour,",
-                "Olá,",
-                "Ciao,",
-                "Hallo,",
-                "Salam,",
-                "He,j"
-            ],
-            autoStart: true,
-        });
-    }, [])
-
 
     return (
         <>
@@ -34,7 +13,7 @@ const Profile = () => {
             <span className='flex flex-col gap-5 md:gap-7 '>
                 <span className='overflow-hidden'>
                     <Para>
-                        <span id='greet'>greet</span>👋 I'm Abhishek Navgan, a developer with a
+                        Hello 👋, I'm Abhishek Navgan, a developer with a
                         not-so-secret obsession with tech. I'm currently
                         pursuing a Bachelor of Computer Applications degree
                         at TMV Pune, where I spend most of my time coding,
@@ -70,8 +49,6 @@ const Profile = () => {
                     </span>
                 </span>
             </span>
-
-
         </>
     )
 }
