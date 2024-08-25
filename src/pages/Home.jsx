@@ -58,13 +58,13 @@ const Home = () => {
                     </Frame>
                 </div>
 
-                <div className='bg-dark pb-5 md:pb-10 text-xl' id='fetured-projects'>
+                <div className='bg-dark pb-5 text-xl' id='fetured-projects'>
                     <Frame>
                         <Projects projects={projects} />
                     </Frame>
                 </div>
 
-                <footer id='footer' className='bg-dark pt-5'>
+                <footer id='footer' className='bg-dark pt-3'>
                     <Footer />
                 </footer>
             </div>

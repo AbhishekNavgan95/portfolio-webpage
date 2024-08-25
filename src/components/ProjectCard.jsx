@@ -21,7 +21,7 @@ const ProjectCard = ({ project }) => {
             </div>
             <div className='pb-3 px-3 flex flex-col gap-3'>
                 <h3 className='flex pt-3 lg:pt-0 items-center gap-3 text-lg md:text-xl text-f-light '><FaDotCircle />{project?.title}</h3>
-                <p className='text-sm md:text-lg line-clamp-2'>{project?.description}</p>
+                <p className='text-sm line-clamp-2'>{project?.description}</p>
                 <div className=''>
                     {
                         project?.tags?.split(",")?.map((tag, index) => (

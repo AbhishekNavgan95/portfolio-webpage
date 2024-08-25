@@ -1,7 +1,11 @@
+import { useNavigate } from 'react-router-dom'
 import React from 'react'
 import ProjectCard from './ProjectCard'
 
-const Projects = ({projects}) => {
+const Projects = ({ projects }) => {
+
+    const navigate = useNavigate();
+
     return (
         <div className='flex flex-col gap-5'>
             <div className='flex flex-col gap-3'>
@@ -19,6 +23,9 @@ const Projects = ({projects}) => {
                             Projects Not Found...
                         </div>
                 }
+            </div>
+            <div className='text-base fet-two'>
+            Visit my <a className='underline text-sky-500 cursor-pointer' target='_blank' href={import.meta.env.VITE_GITHUB}>GitHub</a> for more projects! There’s a little surprise there.
             </div>
         </div>
     )
