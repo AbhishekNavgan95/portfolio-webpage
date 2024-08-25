@@ -25,6 +25,21 @@ const GSAP = () => {
             duration: 0.5
         })
 
+        const social = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#social",
+                scroller: "body",
+                start: "50 80%",
+                // markers: true,
+            }
+        })
+
+        social.from(".social", {
+            opacity: 0,
+            duration: 0.5,
+            stagger: 0.2
+        })
+
         const t4 = gsap.timeline({
             scrollTrigger: {
                 trigger: "#skills",

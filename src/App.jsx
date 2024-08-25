@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom"
 import Home from "./pages/Home"
 import Error from "./pages/Error"
+import CreateProject from "./pages/CreateProject"
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
           <Routes>
             <Route path="/">
               <Route index element={<Home />} />
+              <Route path="add" element={<CreateProject />} />
               <Route path="*" element={<Error />} />
             </Route>
           </Routes>
